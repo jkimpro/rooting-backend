@@ -1,0 +1,37 @@
+#  application.yml
+spring:
+  profiles:
+    active: local
+
+server:
+  port: 8080
+  servlet:
+    path: /
+    context-path: /
+
+test: aaa
+
+##LOCAL
+#---
+#spring:
+#  profiles: local
+#
+#logging:
+#  config: classpath:logback-${spring.profiles.active}.xml
+#
+#sftp:
+#  url: 10.52.221.214
+#  usr: service
+#  key: /ucs_key/echo.private
+#  phrase: smart4c
+#  promptPwd: false
+#  promptPhrase: true
+#  promptYN: false
+#  rootPath: /home/service/
+#  pwd:
+#
+#download:
+#  attach:
+#    file:
+#      server:
+#        folder: C:/upload/
