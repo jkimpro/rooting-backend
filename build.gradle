@@ -13,6 +13,9 @@ buildscript {
     ext{
         springBootVersion='2.0.4.RELEASE'
         kotlinVersion = '1.3.21'
+        slf4jVersion = '1.7.21'
+        log4j2Version = '2.7'
+        commonsLogging = '1.2'
     }
     repositories{
         mavenCentral()
@@ -35,7 +38,7 @@ eclipse {
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group 'com.rooting'
+group 'com.rooting.best'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -50,9 +53,29 @@ dependencies {
     // Web
     compile('org.springframework.boot:spring-boot-starter-web')
     // JDBC
-    //compile("org.springframework.boot:spring-boot-starter-jdbc")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
     // JPA (구동되는 DB가 있어야함)
-    //compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.hibernate:hibernate-core:5.4.15.Final")
+
+//    // SpringBoot Web
+//    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}") {
+//        exclude module: 'spring-boot-starter-logging'
+//    }
+//    // SpringBoot AOP
+//    compile("org.springframework.boot:spring-boot-starter-aop:${springBootVersion}") {
+//        exclude module: 'spring-boot-starter-logging'
+//    }
+
+    // SLF4J-Log4j2
+//    compile("commons-logging:commons-logging:${commonsLogging}")
+//    compile("org.slf4j:slf4j-api:${slf4jVersion}")
+//    compile("org.apache.logging.log4j:log4j-api:${log4j2Version}")
+//    compile("org.apache.logging.log4j:log4j-core:${log4j2Version}")
+//    compile("org.apache.logging.log4j:log4j-slf4j-impl:${log4j2Version}")
+
+    // MYSQL
+    compile("mysql:mysql-connector-java")
     // WebService
     compile('org.springframework.ws:spring-ws-core')
     // Validation annotation
