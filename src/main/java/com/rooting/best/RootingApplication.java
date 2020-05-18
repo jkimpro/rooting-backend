@@ -1,5 +1,6 @@
 package com.rooting.best;
 
+import com.rooting.best.config.RootingWebConfig;
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -19,17 +20,17 @@ public class RootingApplication {
                 + ", classpath:/application.properties").run(args);
     }
 
-//    @Bean
-//    public ServletRegistrationBean web() {
-//        DispatcherServlet dispatcherServlet = new DispatcherServlet();
-//        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
-//        applicationContext.register(RootingWebConfig.class);
-//        dispatcherServlet.setApplicationContext(applicationContext);
-//        ServletRegistrationBean servletRegBean = new ServletRegistrationBean(dispatcherServlet);
-//        servletRegBean.addUrlMappings("/web/*");
-//        servletRegBean.setName("web");
-//        return servletRegBean;
-//    }
+    @Bean
+    public ServletRegistrationBean web() {
+        DispatcherServlet dispatcherServlet = new DispatcherServlet();
+        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
+        applicationContext.register(RootingWebConfig.class);
+        dispatcherServlet.setApplicationContext(applicationContext);
+        ServletRegistrationBean servletRegBean = new ServletRegistrationBean(dispatcherServlet);
+        servletRegBean.addUrlMappings("/web/*");
+        servletRegBean.setName("web");
+        return servletRegBean;
+    }
 //
 //    @Bean
 //    public ServletRegistrationBean mobile() {
