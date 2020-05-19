@@ -26,22 +26,24 @@ public class RootingApplication {
         AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
         applicationContext.register(RootingWebConfig.class);
         dispatcherServlet.setApplicationContext(applicationContext);
+
         ServletRegistrationBean servletRegBean = new ServletRegistrationBean(dispatcherServlet);
         servletRegBean.addUrlMappings("/web/*");
         servletRegBean.setName("web");
         return servletRegBean;
     }
-//
-//    @Bean
-//    public ServletRegistrationBean mobile() {
-//        DispatcherServlet dispatcherServlet = new DispatcherServlet();
-//        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
-//        applicationContext.register(RootingWebConfig.class);
-//        dispatcherServlet.setApplicationContext(applicationContext);
-//        ServletRegistrationBean servletRegBean = new ServletRegistrationBean(dispatcherServlet);
-//        servletRegBean.addUrlMappings("/mobile/*");
-//        servletRegBean.setName("mobile");
-//        return servletRegBean;
-//    }
+
+    @Bean
+    public ServletRegistrationBean mobile() {
+        DispatcherServlet dispatcherServlet = new DispatcherServlet();
+        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
+        applicationContext.register(RootingWebConfig.class);
+        dispatcherServlet.setApplicationContext(applicationContext);
+
+        ServletRegistrationBean servletRegBean = new ServletRegistrationBean(dispatcherServlet);
+        servletRegBean.addUrlMappings("/mobile/*");
+        servletRegBean.setName("mobile");
+        return servletRegBean;
+    }
 
 }

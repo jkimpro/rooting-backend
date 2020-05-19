@@ -61,21 +61,6 @@ public class RootingWebConfig extends WebMvcConfigurationSupport {
         return requestMappingHandlerAdapter;
     }
 
-
-   /*@Bean
-   public EgovBindingInitializer egovBindingInitializer(){
-      return new EgovBindingInitializer();
-   }*/
-
-
-    /*@Bean
-    public BeanNameViewResolver beanNameViewResolver(){
-    BeanNameViewResolver resolver = new BeanNameViewResolver();
-    resolver.setOrder(1);
-    r eturn resolver;
-    }*/
-
-
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**").allowCredentials(false).allowedOrigins("*").allowedMethods("GET", "POST", "OPTIONS");
