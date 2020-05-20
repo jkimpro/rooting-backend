@@ -1,6 +1,7 @@
 package com.rooting.best;
 
-import com.rooting.best.config.RootingWebConfig;
+import com.rooting.best.controller.mobile.RootingMobileConfig;
+import com.rooting.best.controller.web.RootingWebConfig;
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -12,8 +13,6 @@ import org.springframework.web.servlet.DispatcherServlet;
 @SpringBootApplication
 public class RootingApplication {
     public static void main(String [] args){
-      //  new SpringApplicationBuilder().bannerMode(Banner.Mode.CONSOLE).properties().run();
-       // SpringApplication.run(RootingApplication.class, args);
         new SpringApplicationBuilder().bannerMode(Banner.Mode.CONSOLE).sources(RootingApplication.class).properties("spring.config.location="
                 + "classpath:/domain.yml"
                 + ", classpath:/application.yml"
@@ -37,7 +36,7 @@ public class RootingApplication {
     public ServletRegistrationBean mobile() {
         DispatcherServlet dispatcherServlet = new DispatcherServlet();
         AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
-        applicationContext.register(RootingWebConfig.class);
+        applicationContext.register(RootingMobileConfig.class);
         dispatcherServlet.setApplicationContext(applicationContext);
 
         ServletRegistrationBean servletRegBean = new ServletRegistrationBean(dispatcherServlet);

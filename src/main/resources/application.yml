@@ -3,7 +3,7 @@ spring:
   profiles:
     active: local
   datasource:
-    url: jdbc:mysql://localhost:3306/rooting_main
+    url: jdbc:mysql://localhost:3306/rooting_main?serverTimezone=Asia/Seoul
     username: jkimpro10
     password: jun48675@#
     jpa:
