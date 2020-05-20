@@ -1,16 +1,26 @@
 package com.rooting.best.vo;
 
 import lombok.Data;
+import lombok.ToString;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @Data
+@Entity
+@ToString
+@Table(name = "MEM_M")
 public class MemMVo {
-    private BigDecimal memCd;
+    @Id
+    private Integer memCd;
+
     private String id;
     private String password;
     private String empYn;
-    private BigDecimal empCd;
+    private Integer empCd;
 }
 
 //    CREATE TABLE MEM_M(

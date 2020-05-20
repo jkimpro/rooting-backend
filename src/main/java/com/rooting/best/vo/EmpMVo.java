@@ -1,16 +1,33 @@
 package com.rooting.best.vo;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @Data
+@Entity
+@ToString
+@Table(name = "EMP_M")
+@Getter
+@Setter
 public class EmpMVo {
-    private BigDecimal empCd;
+
+    @Id
+    @Column(name = "EMP_CD")
+    private Integer empCd;
+
     private String regDt;
     private String regId;
     private String empNm;
-    private BigDecimal teamCd;
+    private Integer teamCd;
     private String onWorkYn;
     private String insideYn;
     private String masterRtYn;

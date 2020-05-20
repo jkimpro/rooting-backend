@@ -56,7 +56,7 @@ public class RootingWebConfig extends WebMvcConfigurationSupport{
                 .ignoredParameterTypes(HttpFrontRequest.class)
                 .groupName("Rooting-API")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.rooting.best.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.rooting.best.controller.web"))
 //          .paths(PathSelectors.any())s
                 .paths(PathSelectors.regex("^((?!OnlyTest).)*$"))    //OnlyTest를 가진 url은 swagger에 비노출
                 .build()
