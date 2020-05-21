@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 
 @Repository
 public interface MemMJpaRepository extends JpaRepository<MemMVo, Integer> {
-    @QueryHints(value = {@QueryHint(name="org.hibernate.comment", value = "MemMJpaRepository.findByMemCd")})
+    @QueryHints(value = {@QueryHint(name = "org.hibernate.comment", value = "MemMJpaRepository.findByMemCd")})
     public MemMVo findByMemCd(Integer memCd);
 
 }

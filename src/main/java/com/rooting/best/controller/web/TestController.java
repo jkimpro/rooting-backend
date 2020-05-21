@@ -30,14 +30,12 @@ public class TestController {
         logger.info(">>> input value :" + temp.toString());
         logger.info(">>> input value :" + temp);
 
-        EmpMVo returnEmpMVo = new EmpMVo();
-        returnEmpMVo = empMJpaRepository.findByEmpCd(temp);
-        logger.debug(">>> output "+ returnEmpMVo);
-        if(!ObjectUtils.isEmpty(returnEmpMVo)) {
+        EmpMVo returnEmpMVo = empMJpaRepository.findByEmpCd(temp);
+        logger.debug(">>> output " + returnEmpMVo);
+        if (!ObjectUtils.isEmpty(returnEmpMVo)) {
             return returnEmpMVo;
-        }
-        else{
-            logger.info("fuck");
+        } else {
+            logger.info("fuck" + returnEmpMVo.getEmpNm());
             return returnEmpMVo;
         }
 

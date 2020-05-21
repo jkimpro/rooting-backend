@@ -5,13 +5,16 @@ import javax.servlet.http.HttpServletRequestWrapper;
 
 public class HttpFrontRequest extends HttpServletRequestWrapper {
     private SessionVo sessionVo;
-    public HttpFrontRequest(HttpServletRequest request){
+
+    public HttpFrontRequest(HttpServletRequest request) {
         super(request);
     }
-    public SessionVo getSessionVo(){
+
+    public SessionVo getSessionVo() {
         return sessionVo;
     }
-    public void setSessionVo(SessionVo sessionVo){
+
+    public void setSessionVo(SessionVo sessionVo) {
         this.sessionVo = sessionVo;
     }
 

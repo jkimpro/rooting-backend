@@ -28,12 +28,12 @@ public class HibernateQueryInterceptor extends EmptyInterceptor {
             sql = sql.replaceFirst(query, query.concat(comment));
         }
 
-         //Maximum limit
+        //Maximum limit
         if (sql.startsWith("SELECT /*") || sql.startsWith("select /*")) {
-           int dualFlag = sql.indexOf("DUAL");
-           if(!(sql.indexOf("DUAL") > 0 || sql.indexOf("dual") > 0)) {
-              sql = "SELECT * FROM (" + sql + ") WHERE ROWNUM <= " + MAX_COUNT;
-           }
+            int dualFlag = sql.indexOf("DUAL");
+            if (!(sql.indexOf("DUAL") > 0 || sql.indexOf("dual") > 0)) {
+                sql = "SELECT * FROM (" + sql + ") WHERE ROWNUM <= " + MAX_COUNT;
+            }
         }
         return super.onPrepareStatement(sql);
     }

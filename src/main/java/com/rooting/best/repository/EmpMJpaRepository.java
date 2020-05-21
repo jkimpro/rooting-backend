@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 @Repository
 public interface EmpMJpaRepository extends JpaRepository<EmpMVo, Integer> {
-    @QueryHints(value = {@QueryHint(name="org.hibernate.comment", value = "EmpMJpaRepository.findByEmpCd")})
+    @QueryHints(value = {@QueryHint(name = "org.hibernate.comment", value = "EmpMJpaRepository.findByEmpCd")})
     public EmpMVo findByEmpCd(Integer empCd);
 
 }

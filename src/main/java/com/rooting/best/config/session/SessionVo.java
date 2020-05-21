@@ -1,4 +1,5 @@
 package com.rooting.best.config.session;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -10,49 +11,49 @@ import io.swagger.annotations.ApiModelProperty;
 @Data
 public class SessionVo {
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String sessionUserId;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String sessionUserIp;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String sessionUserNm;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String sessionHndphnNo;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String sessionEmailAddr;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String sessionOrgId;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String sessionOrgNm;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String sessionFuncAuthList;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String regDt;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String regId;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String modDt;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String modId;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String retCd;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String retMsg;
 
-    @ApiModelProperty(hidden=true)
+    @ApiModelProperty(hidden = true)
     protected String creuser;
 
     private SessionVo sessionVo;
@@ -80,7 +81,7 @@ public class SessionVo {
     }
 
     public void setSessionInfo(SessionVo sessionVo) {
-        if(!ObjectUtils.isEmpty(sessionVo)) {
+        if (!ObjectUtils.isEmpty(sessionVo)) {
             this.sessionVo = sessionVo;
         }
     }

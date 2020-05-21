@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 
 @Repository
 public interface ShopMJpaRepository extends JpaRepository<ShopMVo, Integer> {
-    @QueryHints(value = {@QueryHint(name="org.hibernate.comment", value = "ShopMJpaRepository.findByShopCd")})
+    @QueryHints(value = {@QueryHint(name = "org.hibernate.comment", value = "ShopMJpaRepository.findByShopCd")})
     public ShopMVo findByShopCd(Integer shopCd);
 
 }

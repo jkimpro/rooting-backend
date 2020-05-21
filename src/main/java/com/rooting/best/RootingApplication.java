@@ -12,7 +12,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 @SpringBootApplication
 public class RootingApplication {
-    public static void main(String [] args){
+    public static void main(String[] args) {
         new SpringApplicationBuilder().bannerMode(Banner.Mode.CONSOLE).sources(RootingApplication.class).properties("spring.config.location="
                 + "classpath:/domain.yml"
                 + ", classpath:/application.yml"
