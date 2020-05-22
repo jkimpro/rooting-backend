@@ -11,8 +11,8 @@ import javax.persistence.QueryHint;
 import java.math.BigDecimal;
 
 @Repository
-public interface MemMJpaRepository extends JpaRepository<MemMVo, Integer> {
+public interface MemMJpaRepository extends JpaRepository<MemMVo, BigDecimal> {
     @QueryHints(value = {@QueryHint(name = "org.hibernate.comment", value = "MemMJpaRepository.findByMemCd")})
-    public MemMVo findByMemCd(Integer memCd);
+    public MemMVo findByMemCd(BigDecimal memCd);
 
 }

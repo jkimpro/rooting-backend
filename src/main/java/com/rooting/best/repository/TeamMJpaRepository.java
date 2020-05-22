@@ -10,8 +10,8 @@ import javax.persistence.QueryHint;
 import java.math.BigDecimal;
 
 @Repository
-public interface TeamMJpaRepository extends JpaRepository<TeamMVo, Integer> {
+public interface TeamMJpaRepository extends JpaRepository<TeamMVo, BigDecimal> {
     @QueryHints(value = {@QueryHint(name = "org.hibernate.comment", value = "TeamMJpaRepository.findByTeamCd")})
-    public TeamMVo findByTeamCd(Integer teamCd);
+    public TeamMVo findByTeamCd(BigDecimal teamCd);
 
 }

@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 @Table(name = "TEAM_M")
 public class TeamMVo {
     @Id
-    private Integer teamCd;
+    private BigDecimal teamCd;
     private String regDt;
     private String regId;
     private String teamNm;

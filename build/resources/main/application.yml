@@ -4,6 +4,7 @@ spring:
     active: local
   datasource:
     url: jdbc:mysql://localhost:3306/rooting_main?serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: jkimpro10
     password: jun48675@#
     jpa:

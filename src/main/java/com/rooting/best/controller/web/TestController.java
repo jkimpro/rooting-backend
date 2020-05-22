@@ -25,20 +25,18 @@ public class TestController {
     public EmpMVo test() {
 
         logger.info(">>> test web controller");
-        Integer temp = new Integer(1000);
+        BigDecimal temp = new BigDecimal(1000);
 
         logger.info(">>> input value :" + temp.toString());
         logger.info(">>> input value :" + temp);
 
         EmpMVo returnEmpMVo = empMJpaRepository.findByEmpCd(temp);
-        logger.debug(">>> output " + returnEmpMVo);
+        logger.info(">>> output value name:" + returnEmpMVo.getEmpNm());
         if (!ObjectUtils.isEmpty(returnEmpMVo)) {
             return returnEmpMVo;
         } else {
-            logger.info("fuck" + returnEmpMVo.getEmpNm());
-            return returnEmpMVo;
+            return null;
         }
-
     }
 
 }

@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 @Table(name = "MEM_M")
 public class MemMVo {
     @Id
-    private Integer memCd;
+    private BigDecimal memCd;
 
     private String id;
     private String password;

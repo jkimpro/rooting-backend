@@ -22,7 +22,7 @@ public class EmpMVo {
 
     @Id
     @Column(name = "EMP_CD")
-    private Integer empCd;
+    private BigDecimal empCd;
 
     private String regDt;
     private String regId;

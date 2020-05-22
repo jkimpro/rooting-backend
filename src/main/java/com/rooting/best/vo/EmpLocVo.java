@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 @Table(name = "EMP_LOC")
 public class EmpLocVo {
     @Id
-    private Integer empCd;
+    private BigDecimal empCd;
 
     private BigDecimal locLat;
 

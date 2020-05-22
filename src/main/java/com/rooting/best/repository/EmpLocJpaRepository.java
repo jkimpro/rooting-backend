@@ -10,8 +10,8 @@ import javax.persistence.QueryHint;
 import java.math.BigDecimal;
 
 @Repository
-public interface EmpLocJpaRepository extends JpaRepository<EmpLocVo, Integer> {
+public interface EmpLocJpaRepository extends JpaRepository<EmpLocVo, BigDecimal> {
     @QueryHints(value = {@QueryHint(name = "org.hibernate.comment", value = "EmpLocJpaRepository.findByEmpCd")})
-    public EmpLocVo findByEmpCd(Integer empCd);
+    public EmpLocVo findByEmpCd(BigDecimal empCd);
 
 }
