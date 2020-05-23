@@ -39,6 +39,6 @@ public class LocationController {
         logger.info(" >>> lat: " + inputValue.getLocLat() + " lng: " + inputValue.getLocLng());
 
         boolean retrunValue = cmmService.setEmpLocation(inputValue);
-        return false;
+        return retrunValue;
     }
 }
