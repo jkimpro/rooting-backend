@@ -1,7 +1,6 @@
 package com.rooting.best.repository;
 
 import com.rooting.best.vo.EmpLocVo;
-import com.rooting.best.vo.EmpMVo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.stereotype.Repository;

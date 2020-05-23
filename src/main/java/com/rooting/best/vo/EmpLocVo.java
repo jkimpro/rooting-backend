@@ -3,21 +3,24 @@ package com.rooting.best.vo;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
 @Entity
 @ToString
 @Table(name = "EMP_LOC")
-public class EmpLocVo {
+public class EmpLocVo implements Serializable {
+
+    //JPA save 사용할때는 GeneratedValue 를 무조건 사용해야함!
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private BigDecimal empCd;
 
     private BigDecimal locLat;
-
     private BigDecimal locLng;
+    private String regDt;
+    private String regId;
 }
