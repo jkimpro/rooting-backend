@@ -1,5 +1,6 @@
 package com.rooting.best.vo;
 
+import com.rooting.best.config.session.SessionVo;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +19,7 @@ import java.math.BigDecimal;
 @Table(name = "EMP_M")
 @Getter
 @Setter
-public class EmpMVo {
+public class EmpMVo extends SessionVo {
 
     @Id
     @Column(name = "EMP_CD")

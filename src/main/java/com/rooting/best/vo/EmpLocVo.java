@@ -1,5 +1,6 @@
 package com.rooting.best.vo;
 
+import com.rooting.best.config.session.SessionVo;
 import lombok.Data;
 import lombok.ToString;
 
@@ -12,7 +13,7 @@ import java.math.BigDecimal;
 @Entity
 @ToString
 @Table(name = "emp_loc")
-public class EmpLocVo implements Serializable {
+public class EmpLocVo extends SessionVo {
 
     //JPA save 사용할때는 GeneratedValue 를 무조건 사용해야함!
     @Id

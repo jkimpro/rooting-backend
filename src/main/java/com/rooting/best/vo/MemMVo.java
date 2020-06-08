@@ -1,5 +1,6 @@
 package com.rooting.best.vo;
 
+import com.rooting.best.config.session.SessionVo;
 import lombok.Data;
 import lombok.ToString;
 
@@ -13,7 +14,7 @@ import java.math.BigDecimal;
 @Entity
 @ToString
 @Table(name = "MEM_M")
-public class MemMVo {
+public class MemMVo extends SessionVo {
     @Id
     private BigDecimal memCd;
 
